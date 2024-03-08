@@ -6,4 +6,4 @@ SilverStripe\SiteConfig\SiteConfig:
     - XD\CustomCMSLogo\Extensions\SiteConfigExtension
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - 'silverstripe-custom-cms-logo/client/dist/styles/customcmslogo.css'
+    - 'vendor/xddesigners/silverstripe-custom-cms-logo/client/dist/styles/customcmslogo.css'
