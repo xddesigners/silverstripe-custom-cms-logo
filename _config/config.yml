@@ -1,0 +1,9 @@
+---
+Name: silverstripe-custom-cms-logo
+---
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - XD\CustomCMSLogo\Extensions\SiteConfigExtension
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - 'silverstripe-custom-cms-logo/client/dist/styles/customcmslogo.css'

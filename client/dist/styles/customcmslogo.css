@@ -1,0 +1,7 @@
+.cms-sitename--has-logo{
+    height: auto;
+}
+
+.cms-sitename--has-logo .cms-sitename__title{
+    margin: 0;
+}
