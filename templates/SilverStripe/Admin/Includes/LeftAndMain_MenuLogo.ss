@@ -3,7 +3,11 @@
     </a>
     <a class="cms-sitename__title" href="$BaseHref" target="_blank">
         <% if $SiteConfig.CMSLogo %>
-            <img src="$SiteConfig.CMSLogo.ScaleWidth(180).Link" alt="<% if $SiteConfig %>$SiteConfig.Title<% else %>$ApplicationName<% end_if %>">
+            <% if $SiteConfig.CMSLogo.Extension == "svg" %>
+                <img style="width:170px; padding:10px 5px;" src="$SiteConfig.CMSLogo.Link" alt="<% if $SiteConfig %>$SiteConfig.Title<% else %>$ApplicationName<% end_if %>">
+            <% else %>
+                <img src="$SiteConfig.CMSLogo.ScaleWidth(180).Link" alt="<% if $SiteConfig %>$SiteConfig.Title<% else %>$ApplicationName<% end_if %>">
+            <% end_if %>
         <% else %>
             <% if $SiteConfig %>$SiteConfig.Title<% else %>$ApplicationName<% end_if %>
         <% end_if %>
