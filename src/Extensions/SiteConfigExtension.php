@@ -5,7 +5,7 @@ namespace XD\CustomCMSLogo\Extensions;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\SiteConfig\SiteConfig;
 
 /**
@@ -14,26 +14,25 @@ use SilverStripe\SiteConfig\SiteConfig;
  * @property SiteConfig|SiteConfigExtension $owner
  * @method Image CMSLogo()
  */
-class SiteConfigExtension extends DataExtension
+class SiteConfigExtension extends Extension
 {
 
     private static $has_one = [
-        'CMSLogo' => Image::class
+        'CMSLogo' => Image::class,
     ];
 
     private static $owns = [
-        'CMSLogo'
+        'CMSLogo',
     ];
 
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldsToTab(
-           'Root.CMSLogo',
-           [
-               UploadField::create('CMSLogo', _t(__CLASS__ . '.CMSLogo', 'CMS logo'))->setFolderName('cms')
-           ]
+            'Root.CMSLogo',
+            [
+                UploadField::create('CMSLogo', _t(__CLASS__ . '.CMSLogo', 'CMS logo'))->setFolderName('cms'),
+            ]
         );
-        parent::updateCMSFields($fields);
     }
 
 }
