@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "silverstripe/admin": "^6",
+        "silverstripe/admin": "^6"
     },
     "autoload": {
         "psr-4": {
