@@ -13,8 +13,7 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "^6",
-        "silverstripe/cms": "^6"
+        "silverstripe/admin": "^6",
     },
     "autoload": {
         "psr-4": {
